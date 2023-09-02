@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>User registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		function validatePassword() {
+			console.log("in validation")
+			   var password = document.getElementById("password").value;
+			   var confirmPassword = document.getElementById("confirmpassword").value;
+			  
+   
+			   if (password !== confirmPassword) {
+				   document.getElementById("passwordError").innerHTML = "Passwords do not match.";
+			      return false
+			   } else {
+				   document.getElementById("passwordError").innerHTML = "";
+				   return true;
+			      
+			   }
+			
+		   }
+	
+	    function userFound(){
+			var email=document.getElementById("email").value
+			console.log(email)
+		
+			$.ajax({
+				type:"POST",
+				url:"../userfound.php",
+				data:{
+					"email":email,
+				},
+				success:function(data){
+					console.log(data)
+					if(data==="1"){
+						document.getElementById("emailError").innerHTML="User already exist"
+						
+					}
+					else{
+						document.getElementById("emailError").innerHTML=""
+						
+
+					}
+				},
+				error:function(data){
+					console.log(data)
+
+				}
+
+			})
+			return isuser
+		}
+   </script>
+
+	</head>
+	<body class="img js-fullheight" style="background-image: url(images/bg.jpg);">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">User Registration</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<h3 class="mb-4 text-center"></h3>
+		      	<form action="user.php" method="POST" class="signin-form" onsubmit="return validatePassword()">
+		      		<div class="form-group">
+		      			<input type="text" class="form-control" name="username" placeholder="Username" required>
+		      		</div>
+					  <div class="form-group">
+						<input type="email" class="form-control" name="email" id="email" placeholder="Enter  Email" required onchange="userFound()">
+						<span id="emailError" style="color: rgb(255, 0, 0);"></span>
+		      		</div>
+					  <div class="form-group">
+						<input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Phone" required pattern="[0-9]{10}">
+		      		</div>
+	            <div class="form-group">
+	              <input id="password" type="password" name="password" class="form-control" placeholder="Password" requiredpattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="Password must contain at least one digit, one lowercase and one uppercase letter, and be at least 8 characters long.">
+	              <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+	            </div>
+				<div class="form-group">
+					<input id="confirmpassword" type="password" class="form-control" placeholder="Confirm Password" name="confirmpassword" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="Password must contain at least one digit, one lowercase and one uppercase letter, and be at least 8 characters long.">
+					<span toggle="#confirmpassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+				  </div>
+				  <span id="passwordError" style="color: rgb(255, 0, 0);"></span>
+	            <div class="form-group">
+					<div class="form-group">
+						<!-- <label for="dropdown">Select a state:</label> -->
+						<select id="dropdown" name="securityquestion" class="form-control">
+							<option selected disabled>security question</option>
+							<option value="food">favorite food</option>
+							<option value="place">favorite place</option>
+							<option value="name">favorite name</option>
+							<option value="color">favorite color</option>
+							<option value="car">favorite car</option>
+						</select>
+					  </div>
+					  <div class="form-group">
+						<input type="text" class="form-control" name="answer" id="Pincode" placeholder="answer" required>
+		      		</div>
+	            	<button type="submit" class="form-control btn btn-primary submit px-3">Register</button>
+	            </div>
+	            <div class="form-group d-md-flex">
+	            	<div class="w-50">
+		            	<label class="checkbox-wrap checkbox-primary">Remember Me
+									  <input type="checkbox" checked>
+									  <span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="w-50 text-md-right">
+									<a href="#" style="color: #ffffff">Forgot Password</a>
+								</div>
+	            </div>
+			
+	          </form>
+	          <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
+	          <div class="social d-flex text-center">
+	          	<a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s|c|550525804944|b|facebook%20%27|&placement=&creative=550525804944&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696220912%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-327195741349%26loc_physical_ms%3D9153202%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQjwl8anBhCFARIsAKbbpyQPiEOsTMYHvn9cG_MNfe8Dsje9NjMHhgJEfYr79UDiceKHYsceVsMaAtDwEALw_wcB" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
+	          	<a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
+	          </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+	</body>
+</html>
+
