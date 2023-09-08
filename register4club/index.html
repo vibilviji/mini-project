@@ -29,7 +29,7 @@
         }
 </script>
 	</head>
-	<body class="img js-fullheight" style="background-image: url(images/bg.jpg);background-size: auto;">
+	<body class="img js-fullheight" style="background-image: url(images/bg.jpg);background-size: cover;">
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -42,29 +42,26 @@
 					<div class="login-wrap p-0">
 		      	<form action="club.php" method="POST" class="signin-form" onsubmit="return validatePassword()" enctype="multipart/form-data">
 		      		<div class="form-group">
-						<input type="text" class="form-control" name="name" id="name" placeholder="Enter Club Name" required pattern="^[A-Za-z\s\-]+$">
+						<input type="text" class="form-control" name="clubname" id="name" placeholder="Enter Club Name" required pattern="^[A-Za-z\s\-]+$">
 		      		</div>
 					<div class="form-group">
-						<input type="email" class="form-control" name="email" id="email" placeholder="Enter  Email" required>
+						<input type="email" class="form-control" name="clubemail" id="email" placeholder="Enter  Email" required>
 		      		</div>
 					  <div class="form-group">
-						<input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Phone" required pattern="[0-9]{10}">
+						<input type="text" class="form-control" name="clubphone" id="phone" placeholder="Enter Phone" required pattern="[0-9]{10}">
 		      		</div>
 					  <div class="form-group">
-						<input type="text" class="form-control" name="place" id="place" placeholder="Enter Your Place" required>
+						<input type="text" class="form-control" name="clubcity" id="city" placeholder="Enter city"required >
 		      		</div>
 					  <div class="form-group">
-						<input type="text" class="form-control" name="city" id="city" placeholder="Enter city"required >
+						<input type="text" class="form-control" name="clubdistrict" id="district" placeholder="Enter district" required>
 		      		</div>
 					  <div class="form-group">
-						<input type="text" class="form-control" name="district" id="district" placeholder="Enter district" required>
-		      		</div>
-					  <div class="form-group">
-						<input type="text" class="form-control" name="Pincode" id="Pincode" placeholder="Enter Pincode" required pattern="[0-6]{6}">
+						<input type="text" class="form-control" name="clubpincode" id="Pincode" placeholder="Enter Pincode" required pattern="[0-6]{6}">
 		      		</div>
 					  <div class="form-group">
 						<!-- <label for="dropdown">Select a state:</label> -->
-						<select id="dropdown" name="state" class="form-control">
+						<select  name="state" class="form-control">
 							<option selected disabled>Select a state</option>
 							<option value="apple">kerala</option>
 							<option value="banana">tamilnade</option>
@@ -75,16 +72,73 @@
 		      		</div>
 					  <div class="form-group">
 						<label>Upload License</label>
-						<input type="file" class="form-control" name="licence" id="licence" required>
+						<input type="file" class="form-control" name="licence" id="license" required>
 		      		</div>
+
+					  <div class="form-group">
+						<label>Account manager</label>
+						<input type="text" class="form-control" name="Name" id="name" placeholder="Enter name" required>
+		      		</div>
+					  <div class="form-group">
+						<input type="email" class="form-control" name="Email" id="Email" placeholder="Enter email" required >
+		      		</div>
+					  <div class="form-group">
+						<input type="phone" class="form-control" name="Phone" id="phone" placeholder="Enter phone" required pattern="[0-9]{10}">
+		      		</div>
+					  <div class="form-group">
+						<input type="housename" class="form-control" name="HouseName" id="House name" placeholder="House name" required >
+		      		</div>
+					  <div class="form-group">
+						<input type="text" class="form-control" name="place" id="place" placeholder="Enter Your Place" required>
+					  </div>
+					  <div class="form-group">
+						<input type="text" class="form-control" name="district" id="district" placeholder="Enter district" required>
+		      		</div>
+					  <div class="form-group">
+						<input type="number" class="form-control" name="Pincode" id="Pincode" placeholder="Enter Pincode" required max="999999">
+		      		</div>
+					  <div class="form-group">
+						<!-- <label for="dropdown">Select a state:</label> -->
+						<select  name="state" class="form-control">
+							<option selected disabled>Select a state</option>
+							<option value="apple">kerala</option>
+							<option value="banana">tamilnade</option>
+							<option value="cherry">karnataka</option>
+							<option value="grape">maharashtra</option>
+							<option value="orange">telengana</option>
+						</select>
+		      		</div>
+					  <div class="form-group">
+						<label>Id Proof</label>
+						<input type="file" class="form-control" name="idproof" id="Id Proof" required>
+		      		</div>
+
+
+
 	            <div class="form-group">
-	              <input id="password" type="password" class="form-control" placeholder="Password" name="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="Password must contain at least one digit, one lowercase and one uppercase letter, and be at least 8 characters long.">
+	              <input id="password" type="password" class="form-control" placeholder="password" name="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="Password must contain at least one digit, one lowercase and one uppercase letter, and be at least 8 characters long.">
 	              <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 	            </div>
 				<div class="form-group">
 	              <input id="confirmpassword" type="password" class="form-control" placeholder="confirm password" name="confirmpassword" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="Password must contain at least one digit, one lowercase and one uppercase letter, and be at least 8 characters long.">
 	              <span toggle="#confirmpassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 	            </div>
+				<div class="form-group">
+					<div class="form-group">
+						<!-- <label for="dropdown">Select a state:</label> -->
+						<select id="dropdown" name="securityquestion" class="form-control">
+							<option selected disabled>security question</option>
+							<option value="food">favorite food</option>
+							<option value="place">favorite place</option>
+							<option value="name">favorite name</option>
+							<option value="color">favorite color</option>
+							<option value="car">favorite car</option>
+						</select>
+					  </div>
+					  <div class="form-group">
+						<input type="text" class="form-control" name="answer" id="Pincode" placeholder="answer" required>
+		      		</div>
+
                 <span id="passwordError" style="color: rgb(255, 0, 0);"></span>
 	            <div class="form-group">
 	            	<button type="submit" class="form-control btn btn-primary submit px-3">Register</button>
@@ -101,11 +155,7 @@
 								</div>
 	            </div>
 	          </form>
-	          <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
-	          <div class="social d-flex text-center">
-	          	<a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
-	          	<a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
-	          </div>
+	         
 		      </div>
 				</div>
 			</div>
