@@ -77,7 +77,7 @@ if ($uploadOk == 0) {
     if (move_uploaded_file($_FILES["licence"]["tmp_name"], $target_file)) {
     //   echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
     if (move_uploaded_file($_FILES["idproof"]["tmp_name"], $target_file)){
-      $sql2="insert into registration (Name,Email,Phone,Password,securityquestion,answer,usertype)values('$name','$email','$phone','$password','$securityquestion','$answer','club')";
+      $sql2="insert into registration (Name,Email,Phone,Password,securityquestion,answer,usertype)values('$name','$email','$phone','$password','$securityquestion','$answer','$club')";
       if(mysqli_query($conn,$sql2)){
        $sql3="select userid from registration where email='$email'";
        $res=mysqli_query($conn,$sql3);
