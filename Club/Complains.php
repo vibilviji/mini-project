@@ -61,7 +61,7 @@ include("header.php");
     <header>
         <h1>Complaint Page</h1>
     </header>
-    <form action="#" method="post">
+    <form action="clubcomplains.php" method="POST">
       
 
         <label for="subject">subject:</label>

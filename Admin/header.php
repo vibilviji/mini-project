@@ -4,14 +4,10 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<?php
-session_start();
-
-?>
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Glance Design Dashboard an Admin Panel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>Admin dashboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -116,8 +112,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<div class="main-content">
 	<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 		<!--left-fixed -navigation-->
-        <aside class="sidebar-left">
-     <nav class="navbar navbar-inverse">
+		<aside class="sidebar-left">
+      <nav class="navbar navbar-inverse">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".collapse" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -125,7 +121,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <h1><a class="navbar-brand" href="index.html"><span class="fa fa-area-chart"></span> CLUB<span class="dashboard_text"></span></a></h1>
+            <h1><a class="navbar-brand" href="index.php"><span class="fa fa-area-chart"></span> Admin<span class="dashboard_text"></span></a></h1>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="sidebar-menu">
@@ -136,54 +132,54 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 </a>
               </li>
 			  <li class="treeview">
-                <a href="track.php">
-					<i class="fa fa-road" aria-hidden="true"></i> <span>Track</span>
+                <a href="verifyclub.php">
+					<i class="fa fa-check" aria-hidden="true"></i> <span>Verify Club</span>
                 </a>
               </li>
-              <li class="treeview">
-                <a href="EventCreate.php">
-					<i class="fa fa-plus" aria-hidden="true"></i> <span>Event Create</span>
+			  <li class="treeview">
+                <a href="index.php">
+					<i class="fa fa-globe" aria-hidden="true"></i> <span>View all club</span>
                 </a>
               </li>
-              <li class="treeview">
-                <a href="myevent.php">
-					<i class="fa fa-plus-circle" aria-hidden="true"></i> <span>My event</span>
-                </a>
-              </li>
-              <li class="treeview">
-                <a href="Blog.php">
-					<i class="fa fa-pencil" aria-hidden="true"></i> <span>Blog</span>
-                </a>
-              </li>
-            </li> <li class="treeview">
-                <a href="complains.php">
+			   <li class="treeview">
+                <a href="index.php">
 					<i class="fa fa-comment-o" aria-hidden="true"></i> <span>Complains</span>
                 </a>
-              </li> <li class="treeview">
+              </li>
+			  
+			   <li class="treeview">
                 <a href="../login/logout.php">
 					<i class="fa fa-sign-out" aria-hidden="true"></i><span>logout</span>
                 </a>
               </li>
 			 
              
-    
+             
+               
               
             </ul>
           </div>
           <!-- /.navbar-collapse -->
       </nav>
     </aside>
-    
 	</div>
+		<!--left-fixed -navigation-->
+		
+		<!-- header-starts -->
 		<div class="sticky-header header-section ">
 			<div class="header-left">
 				<!--toggle button start-->
 				<button id="showLeftPush"><i class="fa fa-bars"></i></button>
 				<!--toggle button end-->
+				
 				<!--notification menu end -->
 				<div class="clearfix"> </div>
 			</div>
 			<div class="header-right">
+				
+				
+				
+				
 				<div class="profile_details">		
 					<ul>
 						<li class="dropdown profile_details_drop">
@@ -212,3 +208,4 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="clearfix"> </div>	
 		</div>
+		<!-- //header-ends -->

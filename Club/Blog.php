@@ -67,22 +67,21 @@ include("header.php");
     <header>
         <h1>Blog</h1>
     </header>
-=
+
+<form action="clubblog.php" method="post"  enctype="multipart/form-data">
     <div class="blog-post">
-    <label for="complaint"></label>
-        <textarea id="complaint" name="complaint" required></textarea>
+    <label for="blog"></label>
+        <textarea id="blog" name="blog" required></textarea>
 
         <label for="image">Upload image :</label>
-        <input type="file" id="image" name="image" required>
+        <input type="file" id="image" name="filetoupload" required>
 <br><br>
-       
-        <p></p>
-    </div>
+
    
         <button type="submit">Post Blog</button>
     
     <div class="blog-post">
-  
+    </form>
 
 
         
@@ -99,5 +98,3 @@ include("header.php");
 <?php
 include("footer.php");
 ?>
-		
-		
