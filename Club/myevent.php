@@ -8,7 +8,7 @@ include("header.php");
 	<table class="table">
     <thead>
         <tr>
-            <th>#</th>
+          
 			<th>Eventname</th>
             <th>Promoter</th>
 			<th>venue</th>
@@ -31,13 +31,17 @@ while($row=mysqli_fetch_assoc($res)){
 
 
 <tr>
-            <th scope="row">1</th>
+          
             <td><?php echo $row["eventname"]?></td>
             <td><?php echo $row["promoter"]?></td>
             <td><?php echo $row["venue"]?></td>
             <td><?php echo $row["booking_fee"]?></td>
             <td>
                 <a class="btn btn-primary" href="viewmyevent.php?eventid=<?php echo $row['eventid']?>">View Details</a>
+                <a class="btn btn-primary" href="viewparticipants.php?eventid=<?php echo $row['eventid']?>">Participants</a>
+                <a class="btn btn-primary" href="viewbookings.php?eventid=<?php echo $row['eventid']?>">Bookings</a>
+
+
             </td>
            
         </tr>

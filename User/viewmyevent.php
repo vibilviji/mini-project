@@ -37,10 +37,8 @@ $r=mysqli_fetch_assoc($res);
             <br>
 
 
-            <img src="<?php echo $r['description']?>" width="360" height="240">
-            <br><br>
-            <a href="editevent.php?eventid=<?php echo $eventid?>" class="btn btn-primary">Edit</a>
-            <a href="deleteevent.php?eventid=<?php echo $eventid?>" class="btn btn-primary">Delete</a>
+            <img src="../Club/<?php echo $r['description']?>" width="360" height="240">
+           
 
 
 

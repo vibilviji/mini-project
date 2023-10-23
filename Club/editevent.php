@@ -16,7 +16,7 @@ $row=mysqli_fetch_assoc($res);
 		<h4>Create Event</h4>
 	</div>
 	<form action="updateevent.php" method="POST" enctype="multipart/form-data">
-        <input type="hidden" value="<?php echo $eventid?>">
+        <input type="hidden" name="eventid" value="<?php echo $eventid?>">
 	<div class="form-body">
 		
 		<div class="form-group"> 
@@ -70,8 +70,11 @@ $row=mysqli_fetch_assoc($res);
 		<button type="submit" name="update" class="btn btn-default">Update</button> 
         </form>
 		<div class="form-group"> 
+
+
+
 	    <form action="updatepermit.php" method="POST" enctype="multipart/form-data">
-        
+         <input type="hidden" name="eventid" value="<?php echo $eventid?>">
         <label>Permit</label> 
 		<input type="file" id="permit" name="permit" required=""></div> 
 
@@ -81,12 +84,15 @@ $row=mysqli_fetch_assoc($res);
      
 
         <br><br>
-	<form action="" method="POST" enctype="multipart/form-data">
+
+	<form action="updateposter.php" method="POST" enctype="multipart/form-data">
+	<input type="hidden" name="eventid" value="<?php echo $eventid?>">
 		<label>Poster</label> 
-		<input type="file" id="Description" name="Description"></div> 
+		<input type="file" id="Description" name="poster" required></div> 
         <img src="<?php echo $row['description']?>" width="360" height="240">
 		<button type="submit" name="updateposter" class="btn btn-default">Update</button> 
     </form>
+
         <br>
         <br>
 		

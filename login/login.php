@@ -24,7 +24,7 @@ if(mysqli_num_rows($res)>0){
     $admin_status=mysqli_query($conn,$sql2);
     $s=mysqli_fetch_assoc($admin_status);
     echo $sql2;
-    //echo $s;
+    echo $s;
     if($s["admin_status"]==1){
       header('location:../Club/index.php');
 
@@ -42,7 +42,7 @@ if(mysqli_num_rows($res)>0){
 
 }
 if($usertype=="user"){
-        header('location:../User/index.html');
+        header('location:../User/index.php');
 }
 else{
     ?>

@@ -125,7 +125,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <h1><a class="navbar-brand" href="index.html"><span class="fa fa-area-chart"></span> CLUB<span class="dashboard_text"></span></a></h1>
+            <h1><a class="navbar-brand" href="index.html"><span class="fa fa-area-chart"></span> USER<span class="dashboard_text"></span></a></h1>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="sidebar-menu">
@@ -135,37 +135,24 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <i class="fa fa-dashboard"></i> <span>Home</span>
                 </a>
               </li>
-			  <li class="treeview">
-                <a href="track.php">
-					<i class="fa fa-road" aria-hidden="true"></i> <span>Track</span>
-                </a>
-              </li>
-              <li class="treeview">
-                <a href="EventCreate.php">
-					<i class="fa fa-plus" aria-hidden="true"></i> <span>Event Create</span>
-                </a>
-              </li>
+			
+         
               <li class="treeview">
                 <a href="myevent.php">
 					<i class="fa fa-plus-circle" aria-hidden="true"></i> <span>My event</span>
                 </a>
               </li>
               <li class="treeview">
-                <a href="Blog.php">
+                <a href="blog.php">
 					<i class="fa fa-pencil" aria-hidden="true"></i> <span>Blog</span>
-                </a>
-              </li>
-            </li> <li class="treeview">
-            <a href="my blog.php">
-					<i class="fa fa-pencil" aria-hidden="true"></i> <span>my blog</span>
                 </a>
               </li>
             </li> <li class="treeview">
                 <a href="complains.php">
 					<i class="fa fa-comment-o" aria-hidden="true"></i> <span>Complains</span>
                 </a>
-              </li> <li class="treeview">
-              <a href="mycomplaints.php">
+                  </li> <li class="treeview">
+                <a href="mycomplaints.php">
 					<i class="fa fa-comment-o" aria-hidden="true"></i> <span>My Complains</span>
                 </a>
               </li> <li class="treeview">
