@@ -61,7 +61,11 @@ body {
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
+input:focus{
 
+    background-color :white; 
+  
+}
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -1615,14 +1619,14 @@ pre {
     background-color: transparent;
     border: 0; }
   .form-control:focus {
-    color: #495057;
-    background-color: #fff;
+    color: #ffffff;
+    background-color: #ffffff;
     border-color: #80bdff;
     outline: 0;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
   .form-control::-webkit-input-placeholder {
-    color: #6c757d;
+    color: #ffffff;
     opacity: 1; }
   .form-control:-ms-input-placeholder {
     color: #6c757d;
@@ -8259,7 +8263,8 @@ h1, h2, h3, h4, h5,
     box-shadow: none;
     border-color: rgba(255, 255, 255, 0.4); }
   .form-control:focus {
-    border-color: rgba(255, 255, 255, 0.4); }
+    border-color: rgba(255, 255, 255, 0.4); 
+  }
 
 textarea.form-control {
   height: inherit !important; }

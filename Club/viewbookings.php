@@ -33,7 +33,7 @@ $row2=mysqli_fetch_assoc($res2);
     if (mysqli_num_rows($res) > 0) {
     while ($row = mysqli_fetch_assoc($res)) {
 
-    ?>
+    ?><tr>
     <td><?php echo $row["name"]?></td>
     <td>
         <?php echo $row["email"]?><br>
@@ -42,7 +42,7 @@ $row2=mysqli_fetch_assoc($res2);
     <td><?php echo $row["no_of_seats"]?></td>
     <td><?php echo $row["payment"]?></td>
 
-    <td
+    </tr>
 
 
 

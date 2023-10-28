@@ -8,7 +8,7 @@ if(mysqli_query($conn,$sql)){
        alert(
            "Blog deleted successfully"
        )
-       window.location.href="myblog.php"
+       window.location.href="my blog.php"
    
        </script>
 

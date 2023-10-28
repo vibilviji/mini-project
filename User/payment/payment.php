@@ -11,10 +11,8 @@ $clubid=$_POST["clubid"];
             if(mysqli_query($conn,$sql)){
                 ?>
                 <script>
-                   alert(
-                       "Payment successful"
-                   )
-                   window.location.href="../index.php"
+                  
+                   window.location.href="paid.php"
                
                    </script>
         

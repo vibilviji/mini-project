@@ -137,7 +137,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 </a>
               </li>
 			  <li class="treeview">
-                <a href="index.php">
+                <a href="viewallclub.php">
 					<i class="fa fa-globe" aria-hidden="true"></i> <span>View all club</span>
                 </a>
               </li>

@@ -38,8 +38,8 @@ $r=mysqli_fetch_assoc($res);
 
            
             <br><br>
-            <a href="eventparticipate.php?eventid=<?php echo $eventid?>" class="btn btn-success">Participate in the Event</a>
-            <a href="bookevent.php?eventid=<?php echo $eventid?>" class="btn btn-danger">Book Now</a>
+            <a href="eventparticipate.php?eventid=<?php echo $eventid?>" class="btn btn-success">Participate </a>
+            <a href="bookevent.php?eventid=<?php echo $eventid?>" class="btn btn-danger">Spectator registration booking</a>
 
 
 

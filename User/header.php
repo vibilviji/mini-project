@@ -6,7 +6,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <?php
 session_start();
-
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -179,16 +178,27 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<!--notification menu end -->
 				<div class="clearfix"> </div>
 			</div>
+
+      <?php
+
+$userid=$_SESSION["userid"];
+include("../dbconn.php");
+$sql8="select * from registration where userid='$userid'";
+$res8=mysqli_query($conn,$sql8);
+$r8=mysqli_fetch_assoc($res8);
+
+?>
+
 			<div class="header-right">
 				<div class="profile_details">		
 					<ul>
 						<li class="dropdown profile_details_drop">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 								<div class="profile_img">	
-									<span class="prfil-img"><img src="images/2.jpg" alt=""> </span> 
-									<div class="user-name">
-										<p>Admin Name</p>
-										<span>Administrator</span>
+										<!--<span class="prfil-img"><img src="images/2.jpg" alt=""> </span>   -->
+                    <div class="user-name">
+										<p><?php echo $r8['name']?></p>
+										<span>User</span>
 									</div>
 									<i class="fa fa-angle-down lnr"></i>
 									<i class="fa fa-angle-up lnr"></i>

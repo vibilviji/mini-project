@@ -50,7 +50,7 @@ $r=mysqli_fetch_assoc($res);
 					<p>Number of seats: <?php echo $seatCount ?></p> 
 					<h3>Total: ₹ <?php echo $r["booking_fee"]*$seatCount ?> </h3> 
 				</div>	
-				<h6><a href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Cancel your payment</a></h6>
+				<h6><a href="../index.php"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Cancel your payment</a></h6>
 			</div>	
 			<div class="w3pay-right wthree-pay-grid">
 				<div class="card-bounding agileits"> 

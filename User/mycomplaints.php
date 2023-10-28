@@ -1,7 +1,8 @@
 <?php
-session_start();
-$userid=$_SESSION["userid"];
+
 include("header.php");
+$userid=$_SESSION["userid"];
+
 ?>
 
 <div id="page-wrapper">
@@ -18,10 +19,10 @@ include("header.php");
     ?>
    
                     <!-- <h5 class="card-title">Special title treatment</h5> -->
-                   <p class="card-text">Subject:<?php echo $row['subject'] ?></p>
+                   <h3 class="card-text">Subject:<?php echo $row['subject'] ?></h3>
                     <p class="card-text">Complaint:<?php echo $row['complaint'] ?></p>
                     <p class="card-text">Reply:<?php echo $row['reply'] ?></p>
-                   
+                   <br><br>
                    
                
     <?php

@@ -39,7 +39,7 @@ while($row=mysqli_fetch_assoc($res)){
             <td>
                 <a class="btn btn-primary" href="viewmyevent.php?eventid=<?php echo $row['eventid']?>">View Details</a>
                 <a class="btn btn-primary" href="viewparticipants.php?eventid=<?php echo $row['eventid']?>">Participants</a>
-                <a class="btn btn-primary" href="viewbookings.php?eventid=<?php echo $row['eventid']?>">Bookings</a>
+                <a class="btn btn-primary" href="viewbookings.php?eventid=<?php echo $row['eventid']?>">Spectator Bookings</a>
 
 
             </td>

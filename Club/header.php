@@ -6,7 +6,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <?php
 session_start();
-
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -125,7 +124,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <h1><a class="navbar-brand" href="index.html"><span class="fa fa-area-chart"></span> CLUB<span class="dashboard_text"></span></a></h1>
+            <h1><a class="navbar-brand" href="index.php"><span class="fa fa-area-chart"></span> CLUB<span class="dashboard_text"></span></a></h1>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="sidebar-menu">
@@ -135,11 +134,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <i class="fa fa-dashboard"></i> <span>Home</span>
                 </a>
               </li>
-			  <li class="treeview">
-                <a href="track.php">
-					<i class="fa fa-road" aria-hidden="true"></i> <span>Track</span>
-                </a>
-              </li>
+			 
               <li class="treeview">
                 <a href="EventCreate.php">
 					<i class="fa fa-plus" aria-hidden="true"></i> <span>Event Create</span>
@@ -192,16 +187,25 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<!--notification menu end -->
 				<div class="clearfix"> </div>
 			</div>
+      <?php
+
+      $userid=$_SESSION["userid"];
+      include("../dbconn.php");
+      $sql8="select * from club where userid='$userid'";
+      $res8=mysqli_query($conn,$sql8);
+      $r8=mysqli_fetch_assoc($res8);
+
+      ?>
 			<div class="header-right">
 				<div class="profile_details">		
 					<ul>
 						<li class="dropdown profile_details_drop">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 								<div class="profile_img">	
-									<span class="prfil-img"><img src="images/2.jpg" alt=""> </span> 
+									<!-- <span class="prfil-img"><img src="images/2.jpg" alt=""> </span>  -->
 									<div class="user-name">
-										<p>Admin Name</p>
-										<span>Administrator</span>
+										<p><?php echo $r8['clubname']?></p>
+										<span>Club</span>
 									</div>
 									<i class="fa fa-angle-down lnr"></i>
 									<i class="fa fa-angle-up lnr"></i>
