@@ -8,6 +8,8 @@ $res=mysqli_query($conn,$sql);
 $row=mysqli_fetch_assoc($res);
 
 ?>
+ <form method="POST" action="updateprofile.php">
+
 <div id="page-wrapper">
     <div class="main-page">
    

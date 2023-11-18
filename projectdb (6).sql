@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2023 at 12:14 PM
+-- Generation Time: Nov 18, 2023 at 10:12 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -46,7 +46,8 @@ CREATE TABLE `club` (
 --
 
 INSERT INTO `club` (`userid`, `clubid`, `clubname`, `email`, `phone`, `place`, `district`, `pincode`, `state`, `licence`, `admin_status`) VALUES
-(408, 11, 'clubproject', 'vibil@gamil.com', 1224567905, 'ernakulam', 'piravom', 123456, 'apple', '../uploads/718.jpg', 1);
+(408, 11, 'clubproject', 'vibil@gamil.com', 1224567905, 'ernakulamm', 'piravom', 123457, 'kerala', '../uploads/718.jpg', 1),
+(410, 12, 'MRF', 'jishnu@gmail.com', 7994245510, 'piravom', 'Ernakulam', 686695, 'apple', '../uploads/718.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -60,13 +61,6 @@ CREATE TABLE `clubblog` (
   `blog` varchar(10020) NOT NULL,
   `image` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `clubblog`
---
-
-INSERT INTO `clubblog` (`userid`, `blog_id`, `blog`, `image`) VALUES
-(408, 13, 'jj', 'uploads/718.jpg');
 
 -- --------------------------------------------------------
 
@@ -91,7 +85,9 @@ INSERT INTO `clubcomplaints` (`complaint_id`, `userid`, `subject`, `complaint`, 
 (10, 409, 'ss', 'sss', 'dfdsfdsf'),
 (11, 408, 'abcd', 'bcds', 'no reply'),
 (12, 408, 'dfd', 'dfd', 'no reply'),
-(13, 408, 'kij', 'ioik\r\n', 'no reply');
+(13, 408, 'kij', 'ioik\r\n', 'no reply'),
+(14, 409, 'subject ', 'problem with bug\r\n', 'we will investigate'),
+(15, 408, 'interface issue', 'had a problem with interface', 'no reply');
 
 -- --------------------------------------------------------
 
@@ -141,7 +137,8 @@ INSERT INTO `event` (`eventid`, `userid`, `promoter`, `racetype`, `permit`, `eve
 (7, 408, 'haltech2', ' circuit', 'uploads/718.jpg', 'haltech event', 'mumbai nargar', '2023-10-18', '2023-10-19', '2023-10-20', '2023-10-21', 'uploads/718.jpg', '2023-10-14 05:38:22', 1901),
 (8, 408, 'gas monkey', ' circuit', 'uploads/718.jpg', 'racewars', 'kolkatha', '2023-10-09', '2023-10-25', '2023-10-16', '2023-10-25', 'uploads/718.jpg', '2023-10-14 06:09:20', 2000),
 (9, 408, 'HKS', 'Drag race', 'uploads/718.jpg', 'hks dragiee', 'kochi', '2023-10-09', '2023-10-18', '2023-10-25', '2023-10-20', 'uploads/718.jpg', '2023-10-14 06:10:38', 400),
-(10, 408, 'Gas monkey', ' circuit', 'uploads/3.jpg', 'NHRE drag racing series', 'usa', '2023-10-10', '2023-10-14', '2023-10-15', '2023-10-26', 'uploads/download.jpg', '2023-10-14 09:52:52', 2300);
+(10, 408, 'Gas monkey', ' circuit', 'uploads/3.jpg', 'NHRE drag racing series', 'usa', '2023-10-10', '2023-10-14', '2023-10-15', '2023-10-26', 'uploads/download.jpg', '2023-10-14 09:52:52', 2300),
+(11, 408, 'es motor sports', 'Drag race', 'uploads/3.jpg', 'ES drag event', 'london', '2023-10-25', '2023-10-25', '2023-10-19', '2023-10-27', 'uploads/race1.jpg', '2023-10-28 06:51:02', 500);
 
 -- --------------------------------------------------------
 
@@ -165,7 +162,8 @@ INSERT INTO `event_participate` (`participate_id`, `userid`, `eventid`, `datetim
 (1, 409, 7, '2023-10-14 06:53:54', 0),
 (2, 409, 8, '2023-10-20 16:50:32', 0),
 (3, 409, 9, '2023-10-20 16:50:48', 0),
-(4, 409, 10, '2023-10-20 16:55:48', 0);
+(4, 409, 10, '2023-10-20 16:55:48', 0),
+(5, 409, 11, '2023-10-28 09:58:08', 0);
 
 -- --------------------------------------------------------
 
@@ -189,7 +187,11 @@ CREATE TABLE `payment` (
 --
 
 INSERT INTO `payment` (`paymentid`, `userid`, `clubid`, `payment`, `timstamp`, `status`, `no_of_seats`, `eventid`) VALUES
-(4, 409, 408, 9505, '2023-10-23 05:58:40', 1, 5, 7);
+(4, 409, 408, 9505, '2023-10-23 05:58:40', 1, 5, 7),
+(5, 409, 408, 3802, '2023-10-28 05:45:32', 1, 2, 7),
+(6, 409, 408, 6000, '2023-10-28 06:04:50', 1, 3, 8),
+(7, 409, 408, 5703, '2023-10-28 06:05:48', 1, 3, 7),
+(8, 409, 408, 2000, '2023-10-28 09:58:48', 1, 4, 11);
 
 -- --------------------------------------------------------
 
@@ -214,8 +216,8 @@ CREATE TABLE `registration` (
 
 INSERT INTO `registration` (`userid`, `name`, `email`, `phone`, `password`, `securityquestion`, `answer`, `usertype`) VALUES
 (400, 'Admin', 'admin@gmail.com', 9847913765, 'Admin@123', '', '', 'admin'),
-(408, 'vibil', 'vibil@gamil.com', 1224567905, 'clubprojecT12', 'food', 'biriyani', 'club'),
-(409, 'userproject', 'userproject@gamil.com', 5987461235, 'userprojecT12', 'food', 'biriyani', 'user');
+(408, 'vibil2', 'vibil@gamil.com', 1224567907, 'clubprojecT12', 'food', 'biriyani', 'club'),
+(409, 'Rahul', 'userproject@gamil.com', 799424551, 'User@1234', 'food', 'biriyani', 'user');
 
 -- --------------------------------------------------------
 
@@ -239,7 +241,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`uid`, `userid`, `housename`, `place`, `district`, `pincode`, `state`, `id_proof`) VALUES
-(9, 408, 'vettikuzhiyil', 'ernakulam', 'piravom', 123456, 'apple', '../uploads/718.jpg');
+(9, 409, 'djdkkjd', 'ernakulam', 'piravom', 123456, 'apple', '../uploads/718.jpg'),
+(10, 410, 'ss', 'piravom', 'Ernakulam', 686695, 'apple', '../uploads/718.jpg');
 
 --
 -- Indexes for dumped tables
@@ -307,55 +310,55 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `club`
 --
 ALTER TABLE `club`
-  MODIFY `clubid` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `clubid` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `clubblog`
 --
 ALTER TABLE `clubblog`
-  MODIFY `blog_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `blog_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `clubcomplaints`
 --
 ALTER TABLE `clubcomplaints`
-  MODIFY `complaint_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `complaint_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `clubtrack`
 --
 ALTER TABLE `clubtrack`
-  MODIFY `track_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `track_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `eventid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `eventid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `event_participate`
 --
 ALTER TABLE `event_participate`
-  MODIFY `participate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `participate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
-  MODIFY `paymentid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `paymentid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `registration`
 --
 ALTER TABLE `registration`
-  MODIFY `userid` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=410;
+  MODIFY `userid` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=411;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

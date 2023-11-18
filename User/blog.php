@@ -31,9 +31,7 @@ $userid=$_SESSION["userid"];
     <?php
 
             }}
-        else {
-        echo "No users with userid = 0 found.";
-        }
+      
 
      
         ?>

@@ -55,6 +55,24 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 }
 </style>
 <!--pie-chart --><!-- index page sales reviews visitors pie chart -->
+<script>
+    function validatePassword() {
+			console.log("in validation")
+			   var password = document.getElementById("password").value;
+			   var confirmPassword = document.getElementById("confirmpassword").value;
+			  
+   
+			   if (password !== confirmPassword) {
+				   document.getElementById("passwordError").innerHTML = "Passwords do not match.";
+			      return false
+			   } else {
+				   document.getElementById("passwordError").innerHTML = "";
+				   return true;
+			      
+			   }
+			
+		   }
+</script>
 <script src="js/pie-chart.js" type="text/javascript"></script>
  <script type="text/javascript">
 
@@ -206,9 +224,10 @@ $r8=mysqli_fetch_assoc($res8);
 								</div>	
 							</a>
 							<ul class="dropdown-menu drp-mnu">
-								<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
-								<li> <a href="#"><i class="fa fa-user"></i> My Account</a> </li> 
-								<li> <a href="#"><i class="fa fa-suitcase"></i> Profile</a> </li> 
+							
+								<li> <a href="profile.php"><i class="fa fa-suitcase"></i> Profile</a> </li> 
+								<li> <a href="changepassword.php"><i class="fa fa-user"></i>Password</a> </li> 
+
 								<li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
 							</ul>
 						</li>
